@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In — FeastHouse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- ===== NAV ===== -->
@@ -22,18 +25,15 @@
     </nav>
 
     <div class="auth-wrap">
-      <div class="auth-left">
         <h1>Welcome<br />Back to <span>FeastHouse</span></h1>
         <p>
           Sign in to access your order history, saved addresses, payment
-          methods, and exclusive member discounts. Your next great meal is
-          just a few clicks away.
+          methods, and exclusive member discounts. Your next great meal is just
+          a few clicks away.
         </p>
         <div class="auth-feature">
           <div class="dot"></div>
-          <p>
-            View your full order history and reorder favorites in one click
-          </p>
+          <p>View your full order history and reorder favorites in one click</p>
         </div>
         <div class="auth-feature">
           <div class="dot"></div>
@@ -49,17 +49,22 @@
         </div>
         <div class="auth-feature">
           <div class="dot"></div>
-          <p>
-            Exclusive member-only deals and early access to new menu items
-          </p>
+          <p>Exclusive member-only deals and early access to new menu items</p>
         </div>
-        <img class="auth-img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&amp;q=80" alt="Food" />
-      </div>
+        <img
+          class="auth-img"
+          src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&amp;q=80"
+          alt="Food"
+        />
+      </div> 
       <div class="auth-right">
         <h2>Sign In to Your Account</h2>
         <p class="sub">
           Don't have an account?
-          <a style="color: var(--orange); font-weight: 700; cursor: pointer" onclick="window.location.href='signup.html'">
+          <a
+            style="color: var(--orange); font-weight: 700; cursor: pointer"
+            onclick="window.location.href = 'signup.html'"
+          >
             Create one free — takes 30 seconds.
           </a>
         </p>
@@ -67,15 +72,7 @@
           ✅ Welcome back! You've been signed in successfully. Redirecting...
         </div>
         <div id="signinError" class="alert-error"></div>
-        <div class="social-btns">
-          <div class="social-btn" onclick="quickSignin()">
-            🍎 Continue with Apple
-          </div>
-          <div class="social-btn" onclick="quickSignin()">
-            🔵 Continue with Google
-          </div>
-        </div>
-        <div class="divider">or sign in with email</div>
+      
         <div class="fg">
           <label>Email Address</label>
           <input type="email" id="si_email" placeholder="your@email.com" />
@@ -85,12 +82,19 @@
           <input type="password" id="si_pass" placeholder="••••••••" />
         </div>
         <div class="forgot">Forgot your password?</div>
-        <button class="btn" type="button" style="width: 100%" onclick="doSignin()">
+        <button
+          class="btn"
+          type="button"
+          style="width: 100%"
+          onclick="doSignin()"
+        >
           Sign In to FeastHouse
         </button>
         <div class="auth-switch">
           New to FeastHouse?
-          <a onclick="window.location.href='signup.html'">Create a free account →</a>
+          <a onclick="window.location.href = 'signup.html'"
+            >Create a free account →</a
+          >
         </div>
       </div>
     </div>
@@ -109,27 +113,27 @@
         <div class="footer-col">
           <h5>Menu</h5>
           <ul>
-            <li onclick="window.location.href='order.html'">Burgers</li>
-            <li onclick="window.location.href='order.html'">Pizzas</li>
-            <li onclick="window.location.href='order.html'">Sushi</li>
-            <li onclick="window.location.href='order.html'">Salads</li>
-            <li onclick="window.location.href='order.html'">Desserts</li>
+            <li onclick="window.location.href = 'order.html'">Burgers</li>
+            <li onclick="window.location.href = 'order.html'">Pizzas</li>
+            <li onclick="window.location.href = 'order.html'">Sushi</li>
+            <li onclick="window.location.href = 'order.html'">Salads</li>
+            <li onclick="window.location.href = 'order.html'">Desserts</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li onclick="window.location.href='about.html'">About Us</li>
-            <li onclick="window.location.href='about.html'">Our Chefs</li>
+            <li onclick="window.location.href = 'about.html'">About Us</li>
+            <li onclick="window.location.href = 'about.html'">Our Chefs</li>
             <li>Careers</li>
             <li>Press &amp; Media</li>
-            <li onclick="window.location.href='contact.html'">Contact</li>
+            <li onclick="window.location.href = 'contact.html'">Contact</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
-            <li onclick="window.location.href='contact.html'">Help Center</li>
+            <li onclick="window.location.href = 'contact.html'">Help Center</li>
             <li>Track Your Order</li>
             <li>Refunds Policy</li>
             <li>Allergen Info</li>
@@ -138,7 +142,10 @@
         </div>
       </div>
       <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
-        <span>© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn, NY.</span>
+        <span
+          >© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
+          NY.</span
+        >
         <span>🍔 🍕 🍱 🥗 🍰</span>
       </div>
     </footer>

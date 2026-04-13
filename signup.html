@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up — FeastHouse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ===== Asc NAV ===== -->
+    <!-- ===== NAV ===== -->
     <nav>
       <div class="logo">Feast<span>House</span></div>
       <ul class="nav-links">
@@ -22,14 +25,13 @@
     </nav>
 
     <div class="auth-wrap">
-      <div class="auth-left signup-left">
         <h1 style="color: white">
           Join <span style="color: var(--dark)">FeastHouse</span> Today
         </h1>
         <p style="color: rgba(255, 255, 255, 0.85); margin-bottom: 28px">
-          Create your free account in 30 seconds and unlock the full
-          FeastHouse experience. Over 50,000 members already enjoy exclusive
-          benefits, faster checkout, and a personalized menu every day.
+          Create your free account in 30 seconds and unlock the full FeastHouse
+          experience. Over 50,000 members already enjoy exclusive benefits,
+          faster checkout, and a personalized menu every day.
         </p>
         <div class="plan-cards">
           <div class="plan-card">
@@ -43,8 +45,8 @@
           <div class="plan-card">
             <h4>⭐ Loyalty Points</h4>
             <p>
-              Earn 1 point for every $1 spent. Redeem 100 points for $5 off.
-              No expiry on your points balance.
+              Earn 1 point for every $1 spent. Redeem 100 points for $5 off. No
+              expiry on your points balance.
             </p>
             <div class="plan-price">1 pt / $1</div>
           </div>
@@ -59,19 +61,26 @@
           <div class="plan-card">
             <h4>🎂 Birthday Treat</h4>
             <p>
-              Every year on your birthday, get a completely free dessert of
-              your choice delivered to your door. On us.
+              Every year on your birthday, get a completely free dessert of your
+              choice delivered to your door. On us.
             </p>
             <div class="plan-price">Free Dessert</div>
           </div>
         </div>
-        <img class="auth-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&amp;q=80" alt="Food" />
-      </div>
+        <img
+          class="auth-img"
+          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&amp;q=80"
+          alt="Food"
+        />
+      </div> 
       <div class="auth-right">
         <h2>Create Your Free Account</h2>
         <p class="sub">
           Already have an account?
-          <a style="color: var(--orange); font-weight: 700; cursor: pointer" onclick="window.location.href='signin.html'">
+          <a
+            style="color: var(--orange); font-weight: 700; cursor: pointer"
+            onclick="window.location.href = 'signin.html'"
+          >
             Sign in here.
           </a>
         </p>
@@ -80,15 +89,7 @@
           has been applied.
         </div>
         <div id="signupError" class="alert-error"></div>
-        <div class="social-btns">
-          <div class="social-btn" onclick="quickSignup()">
-            🍎 Sign up with Apple
-          </div>
-          <div class="social-btn" onclick="quickSignup()">
-            🔵 Sign up with Google
-          </div>
-        </div>
-        <div class="divider">or create with email</div>
+
         <div class="fg-row">
           <div class="fg">
             <label>First Name</label>
@@ -109,27 +110,50 @@
         </div>
         <div class="fg">
           <label>Delivery Address</label>
-          <input type="text" id="su_address" placeholder="123 Main Street, Brooklyn, NY" />
+          <input
+            type="text"
+            id="su_address"
+            placeholder="123 Main Street, Brooklyn, NY"
+          />
         </div>
         <div class="fg-row">
           <div class="fg">
             <label>Password</label>
-            <input type="password" id="su_pass" placeholder="Min 8 characters" />
+            <input
+              type="password"
+              id="su_pass"
+              placeholder="Min 8 characters"
+            />
           </div>
           <div class="fg">
             <label>Confirm Password</label>
-            <input type="password" id="su_confirm" placeholder="Repeat password" />
+            <input
+              type="password"
+              id="su_confirm"
+              placeholder="Repeat password"
+            />
           </div>
         </div>
-        <button class="btn btn-green" type="button" style="width: 100%" onclick="doSignup()">
-          Create My Free Account 🎉
+        <button
+          class="btn btn"
+          type="button"
+          style="width: 100%"
+          onclick="doSignup()"
+        >
+          Create My Free Account
         </button>
-        <p style="font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.6;">
+        <p
+          style="
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 14px;
+            line-height: 1.6;
+          "
+        >
           By creating an account you agree to our
           <a style="color: var(--orange)">Terms of Service</a> and
           <a style="color: var(--orange)">Privacy Policy</a>. We never share
-          your data with third parties. You can delete your account at any
-          time.
+          your data with third parties. You can delete your account at any time.
         </p>
       </div>
     </div>
@@ -148,27 +172,27 @@
         <div class="footer-col">
           <h5>Menu</h5>
           <ul>
-            <li onclick="window.location.href='order.html'">Burgers</li>
-            <li onclick="window.location.href='order.html'">Pizzas</li>
-            <li onclick="window.location.href='order.html'">Sushi</li>
-            <li onclick="window.location.href='order.html'">Salads</li>
-            <li onclick="window.location.href='order.html'">Desserts</li>
+            <li onclick="window.location.href = 'order.html'">Burgers</li>
+            <li onclick="window.location.href = 'order.html'">Pizzas</li>
+            <li onclick="window.location.href = 'order.html'">Sushi</li>
+            <li onclick="window.location.href = 'order.html'">Salads</li>
+            <li onclick="window.location.href = 'order.html'">Desserts</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li onclick="window.location.href='about.html'">About Us</li>
-            <li onclick="window.location.href='about.html'">Our Chefs</li>
+            <li onclick="window.location.href = 'about.html'">About Us</li>
+            <li onclick="window.location.href = 'about.html'">Our Chefs</li>
             <li>Careers</li>
             <li>Press &amp; Media</li>
-            <li onclick="window.location.href='contact.html'">Contact</li>
+            <li onclick="window.location.href = 'contact.html'">Contact</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
-            <li onclick="window.location.href='contact.html'">Help Center</li>
+            <li onclick="window.location.href = 'contact.html'">Help Center</li>
             <li>Track Your Order</li>
             <li>Refunds Policy</li>
             <li>Allergen Info</li>
@@ -177,7 +201,10 @@
         </div>
       </div>
       <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
-        <span>© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn, NY.</span>
+        <span
+          >© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
+          NY.</span
+        >
         <span>🍔 🍕 🍱 🥗 🍰</span>
       </div>
     </footer>

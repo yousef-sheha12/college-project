@@ -22,7 +22,6 @@
     </nav>
 
     <div class="wrap">
-      <div class="cart-hero">
         <div>
           <h1 class="sec-title" style="color: #fff; margin-bottom: 0">Your Cart</h1>
           <p>
@@ -31,7 +30,7 @@
           </p>
         </div>
         <div class="count" id="cartCount">0</div>
-      </div>
+      </div> 
 
       <div class="cart-layout">
         <div class="cart-panel">
@@ -71,12 +70,20 @@
               </div>
               <div class="fg">
                 <label>Email</label>
-                <input id="deliveryEmail" type="email" placeholder="you@email.com" />
+                <input
+                  id="deliveryEmail"
+                  type="email"
+                  placeholder="you@email.com"
+                />
               </div>
             </div>
             <div class="fg">
               <label>Address</label>
-              <input id="deliveryAddress" type="text" placeholder="Street, building, apartment" />
+              <input
+                id="deliveryAddress"
+                type="text"
+                placeholder="Street, building, apartment"
+              />
             </div>
             <div class="delivery-grid">
               <div class="fg">
@@ -97,9 +104,15 @@
               <textarea placeholder="Any extra delivery notes"></textarea>
             </div>
 
-            <button type="button" class="btn btn-green" onclick="placeOrder()">Place Order</button>
-            <button type="button" class="btn btn-outline clear-cart">Clear Cart</button>
-            <a class="btn btn-dark" href="order.html" style="text-align: center">Continue Shopping</a>
+            <button type="button" class="btn btn-green" onclick="placeOrder()">
+              Place Order
+            </button>
+            <button type="button" class="btn btn-outline clear-cart">
+              Clear Cart
+            </button>
+            <a class="btn btn-dark" href="order.html" style="text-align: center"
+              >Continue Shopping</a
+            >
           </div>
         </div>
       </div>
@@ -110,31 +123,31 @@
         <div class="footer-brand">
           <div class="logo-f">Feast<span>House</span></div>
           <p>
-            Premium food delivery crafted with love, fresh ingredients, and a passion
-            for flavor.
+            Premium food delivery crafted with love, fresh ingredients, and a
+            passion for flavor.
           </p>
         </div>
         <div class="footer-col">
           <h5>Menu</h5>
           <ul>
-            <li onclick="window.location.href='order.html'">Burgers</li>
-            <li onclick="window.location.href='order.html'">Pizzas</li>
-            <li onclick="window.location.href='order.html'">Sushi</li>
+            <li onclick="window.location.href = 'order.html'">Burgers</li>
+            <li onclick="window.location.href = 'order.html'">Pizzas</li>
+            <li onclick="window.location.href = 'order.html'">Sushi</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
-            <li onclick="window.location.href='signin.html'">Sign In</li>
-            <li onclick="window.location.href='signup.html'">Sign Up</li>
-            <li onclick="window.location.href='order.html'">Back to Menu</li>
+            <li onclick="window.location.href = 'signin.html'">Sign In</li>
+            <li onclick="window.location.href = 'signup.html'">Sign Up</li>
+            <li onclick="window.location.href = 'order.html'">Back to Menu</li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li onclick="window.location.href='about.html'">About Us</li>
-            <li onclick="window.location.href='contact.html'">Contact</li>
+            <li onclick="window.location.href = 'about.html'">About Us</li>
+            <li onclick="window.location.href = 'contact.html'">Contact</li>
           </ul>
         </div>
       </div>
