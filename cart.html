@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - FeastHouse</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Feast<span>House</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrap">
+      <div class="cart-hero">
+        <div>
+          <h1 class="sec-title" style="color: #fff; margin-bottom: 0">Your Cart</h1>
+          <p>
+            Review your items, adjust quantities, and leave delivery details so we can
+            bring your order straight to you.
+          </p>
+        </div>
+        <div class="count" id="cartCount">0</div>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-panel">
+          <h2 class="sec-title" style="font-size: 26px">Items</h2>
+          <div class="cart-list" id="cartItems"></div>
+        </div>
+
+        <div class="cart-panel">
+          <h2 class="sec-title" style="font-size: 26px">Delivery Details</h2>
+          <div id="checkoutSuccess" class="alert-success"></div>
+          <div id="checkoutError" class="alert-error"></div>
+
+          <div class="summary-list">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="subtotalValue">$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <strong id="deliveryValue">$0.00</strong>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="totalValue">$0.00</span>
+            </div>
+          </div>
+
+          <div class="delivery-form">
+            <div class="fg">
+              <label>Full Name</label>
+              <input id="deliveryName" type="text" placeholder="Your name" />
+            </div>
+            <div class="delivery-grid">
+              <div class="fg">
+                <label>Phone</label>
+                <input id="deliveryPhone" type="tel" placeholder="+20 1..." />
+              </div>
+              <div class="fg">
+                <label>Email</label>
+                <input id="deliveryEmail" type="email" placeholder="you@email.com" />
+              </div>
+            </div>
+            <div class="fg">
+              <label>Address</label>
+              <input id="deliveryAddress" type="text" placeholder="Street, building, apartment" />
+            </div>
+            <div class="delivery-grid">
+              <div class="fg">
+                <label>City</label>
+                <input id="deliveryCity" type="text" placeholder="Cairo" />
+              </div>
+              <div class="fg">
+                <label>Payment</label>
+                <select id="paymentMethod">
+                  <option value="">Choose method</option>
+                  <option value="cash">Cash on delivery</option>
+                  <option value="card">Card on delivery</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg">
+              <label>Notes</label>
+              <textarea placeholder="Any extra delivery notes"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-green" onclick="placeOrder()">Place Order</button>
+            <button type="button" class="btn btn-outline clear-cart">Clear Cart</button>
+            <a class="btn btn-dark" href="order.html" style="text-align: center">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
+        <div class="footer-brand">
+          <div class="logo-f">Feast<span>House</span></div>
+          <p>
+            Premium food delivery crafted with love, fresh ingredients, and a passion
+            for flavor.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <ul>
+            <li onclick="window.location.href='order.html'">Burgers</li>
+            <li onclick="window.location.href='order.html'">Pizzas</li>
+            <li onclick="window.location.href='order.html'">Sushi</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li onclick="window.location.href='signin.html'">Sign In</li>
+            <li onclick="window.location.href='signup.html'">Sign Up</li>
+            <li onclick="window.location.href='order.html'">Back to Menu</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li onclick="window.location.href='about.html'">About Us</li>
+            <li onclick="window.location.href='contact.html'">Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
+        <span>&copy; 2025 FeastHouse. All rights reserved.</span>
+        <span>Fresh food, fast delivery.</span>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

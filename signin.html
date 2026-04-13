@@ -66,6 +66,7 @@
         <div id="signinSuccess" class="alert-success">
           ✅ Welcome back! You've been signed in successfully. Redirecting...
         </div>
+        <div id="signinError" class="alert-error"></div>
         <div class="social-btns">
           <div class="social-btn" onclick="quickSignin()">
             🍎 Continue with Apple
@@ -84,7 +85,7 @@
           <input type="password" id="si_pass" placeholder="••••••••" />
         </div>
         <div class="forgot">Forgot your password?</div>
-        <button class="btn" style="width: 100%" onclick="doSignin()">
+        <button class="btn" type="button" style="width: 100%" onclick="doSignin()">
           Sign In to FeastHouse
         </button>
         <div class="auth-switch">
@@ -116,7 +117,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h Asc5>Company</h5>
+          <h5>Company</h5>
           <ul>
             <li onclick="window.location.href='about.html'">About Us</li>
             <li onclick="window.location.href='about.html'">Our Chefs</li>
