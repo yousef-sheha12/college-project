@@ -1173,6 +1173,7 @@ footer {
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
   gap: 22px;
+  padding-inline: 15px;
 }
 .cart-panel {
   background: var(--white);
