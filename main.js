@@ -577,6 +577,12 @@ document.addEventListener("DOMContentLoaded", () => {
     true,
   );
 
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  if (currentPage === "index.html" && !getCurrentUser()) {
+    window.location.href = "signin.html?next=index.html";
+    return;
+  }
+
   markActiveNav();
   requireAuth();
   if (isAuthPage() && getCurrentUser()) {
