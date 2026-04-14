@@ -1,124 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In — FeastHouse</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- ===== NAV ===== -->
-    <nav>
-      <div class="logo">Feast<span>House</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="order.html">Order</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="signin.html" class="active">Sign In</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
-    </nav>
 
-   
-       
-      <div class="auth-right">
-        <h2>Sign In to Your Account</h2>
-        <p class="sub">
-          Don't have an account?
-          <a
-            style="color: var(--orange); font-weight: 700; cursor: pointer"
-            onclick="window.location.href = 'signup.html'"
-          >
-            Create one free — takes 30 seconds.
-          </a>
-        </p>
-        <div id="signinSuccess" class="alert-success">
-          ✅ Welcome back! You've been signed in successfully. Redirecting...
-        </div>
-        <div id="signinError" class="alert-error"></div>
-      
-        <div class="fg">
-          <label>Email Address</label>
-          <input type="email" id="si_email" placeholder="your@email.com" />
-        </div>
-        <div class="fg">
-          <label>Password</label>
-          <input type="password" id="si_pass" placeholder="••••••••" />
-        </div>
-        <div class="forgot">Forgot your password?</div>
-        <button
-          class="btn"
-          type="button"
-          style="width: 100%"
-          onclick="doSignin()"
-        >
-          Sign In to FeastHouse
-        </button>
-        <div class="auth-switch">
-          New to FeastHouse?
-          <a onclick="window.location.href = 'signup.html'"
-            >Create a free account →</a
-          >
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — FeastHouse</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="logo">Feast<span>House</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html" class="active">Sign In</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth-wrap">
+
+
+    <div class="auth-right">
+      <h2>Sign In to Your Account</h2>
+      <p class="sub">
+        Don't have an account?
+        <a style="color: var(--orange); font-weight: 700; cursor: pointer"
+          onclick="window.location.href = 'signup.html'">
+          Create one free — takes 30 seconds.
+        </a>
+      </p>
+      <div id="signinSuccess" class="alert-success">
+        ✅ Welcome back! You've been signed in successfully. Redirecting...
+      </div>
+      <div id="signinError" class="alert-error"></div>
+
+      <div class="fg">
+        <label>Email Address</label>
+        <input type="email" id="si_email" placeholder="your@email.com" />
+      </div>
+      <div class="fg">
+        <label>Password</label>
+        <input type="password" id="si_pass" placeholder="••••••••" />
+      </div>
+      <div class="forgot">Forgot your password?</div>
+      <button class="btn" type="button" style="width: 100%" onclick="doSignin()">
+        Sign In to FeastHouse
+      </button>
+      <div class="auth-switch">
+        New to FeastHouse?
+        <a onclick="window.location.href = 'signup.html'">Create a free account →</a>
       </div>
     </div>
+  </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
-        <div class="footer-brand">
-          <div class="logo-f">Feast<span>House</span></div>
-          <p>
-            Premium food delivery crafted with love, fresh ingredients, and a
-            passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
-            Bronx since 2015.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5>Menu</h5>
-          <ul>
-            <li onclick="window.location.href = 'order.html'">Burgers</li>
-            <li onclick="window.location.href = 'order.html'">Pizzas</li>
-            <li onclick="window.location.href = 'order.html'">Sushi</li>
-            <li onclick="window.location.href = 'order.html'">Salads</li>
-            <li onclick="window.location.href = 'order.html'">Desserts</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <ul>
-            <li onclick="window.location.href = 'about.html'">About Us</li>
-            <li onclick="window.location.href = 'about.html'">Our Chefs</li>
-            <li>Careers</li>
-            <li>Press &amp; Media</li>
-            <li onclick="window.location.href = 'contact.html'">Contact</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Support</h5>
-          <ul>
-            <li onclick="window.location.href = 'contact.html'">Help Center</li>
-            <li>Track Your Order</li>
-            <li>Refunds Policy</li>
-            <li>Allergen Info</li>
-            <li>Privacy Policy</li>
-          </ul>
-        </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
+      <div class="footer-brand">
+        <div class="logo-f">Feast<span>House</span></div>
+        <p>
+          Premium food delivery crafted with love, fresh ingredients, and a
+          passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
+          Bronx since 2015.
+        </p>
       </div>
-      <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
-        <span
-          >© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
-          NY.</span
-        >
-        <span>🍔 🍕 🍱 🥗 🍰</span>
+      <div class="footer-col">
+        <h5>Menu</h5>
+        <ul>
+          <li onclick="window.location.href = 'order.html'">Burgers</li>
+          <li onclick="window.location.href = 'order.html'">Pizzas</li>
+          <li onclick="window.location.href = 'order.html'">Sushi</li>
+          <li onclick="window.location.href = 'order.html'">Salads</li>
+          <li onclick="window.location.href = 'order.html'">Desserts</li>
+        </ul>
       </div>
-    </footer>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li onclick="window.location.href = 'about.html'">About Us</li>
+          <li onclick="window.location.href = 'about.html'">Our Chefs</li>
+          <li>Careers</li>
+          <li>Press &amp; Media</li>
+          <li onclick="window.location.href = 'contact.html'">Contact</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li onclick="window.location.href = 'contact.html'">Help Center</li>
+          <li>Track Your Order</li>
+          <li>Refunds Policy</li>
+          <li>Allergen Info</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
+      <span>© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
+        NY.</span>
+      <span>🍔 🍕 🍱 🥗 🍰</span>
+    </div>
+  </footer>
 
-    <script src="main.js" defer></script>
-  </body>
+  <script src="main.js" defer></script>
+</body>
+
 </html>
