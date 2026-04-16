@@ -1,145 +1,159 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up — FeastHouse</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up — FeastHouse</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <nav>
+      <div class="logo">Feast<span>House</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html" class="active">Sign Up</a></li>
+      </ul>
+    </nav>
 
-<body>
-  <!-- ===== NAV ===== -->
-  <nav>
-    <div class="logo">Feast<span>House</span></div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="order.html">Order</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="signin.html">Sign In</a></li>
-      <li><a href="signup.html" class="active">Sign Up</a></li>
-    </ul>
-  </nav>
+    <div class="auth-wrap">
+      <div class="auth-middle">
+        <h2>Create Your Free Account</h2>
+        <p class="sub">
+          Already have an account?
+          <a
+            style="color: var(--orange); font-weight: 700; cursor: pointer"
+            onclick="window.location.href = 'signin.html'"
+          >
+            Sign in here.
+          </a>
+        </p>
+        <div id="signupSuccess" class="alert-success">
+          🎉 Account created! Welcome to FeastHouse.
+        </div>
+        <div id="signupError" class="alert-error"></div>
 
-  <div class="auth-wrap">
-
-
-    <div class="auth-right">
-      <h2>Create Your Free Account</h2>
-      <p class="sub">
-        Already have an account?
-        <a style="color: var(--orange); font-weight: 700; cursor: pointer"
-          onclick="window.location.href = 'signin.html'">
-          Sign in here.
-        </a>
-      </p>
-      <div id="signupSuccess" class="alert-success">
-        🎉 Account created! Welcome to FeastHouse.
-      </div>
-      <div id="signupError" class="alert-error"></div>
-
-      <div class="fg-row">
-        <div class="fg">
-          <label>First Name</label>
-          <input type="text" id="su_first" placeholder="John" />
+        <div class="fg-row">
+          <div class="fg">
+            <label>First Name</label>
+            <input type="text" id="su_first" placeholder="yousef" />
+          </div>
+          <div class="fg">
+            <label>Last Name</label>
+            <input type="text" id="su_last" placeholder="Sheha" />
+          </div>
         </div>
         <div class="fg">
-          <label>Last Name</label>
-          <input type="text" id="su_last" placeholder="Smith" />
-        </div>
-      </div>
-      <div class="fg">
-        <label>Email Address</label>
-        <input type="email" id="su_email" placeholder="john@email.com" />
-      </div>
-      <div class="fg">
-        <label>Phone Number</label>
-        <input type="tel" id="su_phone" placeholder="+1 (000) 000-0000" />
-      </div>
-      <div class="fg">
-        <label>Delivery Address</label>
-        <input type="text" id="su_address" placeholder="123 Main Street, Brooklyn, NY" />
-      </div>
-      <div class="fg-row">
-        <div class="fg">
-          <label>Password</label>
-          <input type="password" id="su_pass" placeholder="Min 8 characters" />
+          <label>Email Address</label>
+          <input type="email" id="su_email" placeholder="joe@gmail.com" />
         </div>
         <div class="fg">
-          <label>Confirm Password</label>
-          <input type="password" id="su_confirm" placeholder="Repeat password" />
+          <label>Phone Number</label>
+          <input type="tel" id="su_phone" placeholder="+20 109 263 2833" />
         </div>
-      </div>
-      <button class="btn" type="button" style="width: 100%" onclick="doSignup()">
-        Create My Free Account
-      </button>
-      <p style="
+        <div class="fg">
+          <label>Delivery Address</label>
+          <input type="text" id="su_address" placeholder="Your Address" />
+        </div>
+        <div class="fg-row">
+          <div class="fg">
+            <label>Password</label>
+            <input
+              type="password"
+              id="su_pass"
+              placeholder="Min 8 characters"
+            />
+          </div>
+          <div class="fg">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              id="su_confirm"
+              placeholder="Repeat password"
+            />
+          </div>
+        </div>
+        <button
+          class="btn"
+          type="button"
+          style="width: 100%"
+          onclick="doSignup()"
+        >
+          Create My Free Account
+        </button>
+        <p
+          style="
             font-size: 12px;
             color: var(--muted);
             margin-top: 14px;
             line-height: 1.6;
-          ">
-        By creating an account you agree to our
-        <a style="color: var(--orange)">Terms of Service</a> and
-        <a style="color: var(--orange)">Privacy Policy</a>.
-      </p>
-    </div>
-  </div>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
-      <div class="footer-brand">
-        <div class="logo-f">Feast<span>House</span></div>
-        <p>
-          Premium food delivery crafted with love, fresh ingredients, and a
-          passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
-          Bronx since 2015.
+          "
+        >
+          By creating an account you agree to our
+          <a style="color: var(--orange)">Terms of Service</a> and
+          <a style="color: var(--orange)">Privacy Policy</a>.
         </p>
       </div>
-      <div class="footer-col">
-        <h5>Menu</h5>
-        <ul>
-          <li onclick="window.location.href = 'order.html'">Burgers</li>
-          <li onclick="window.location.href = 'order.html'">Pizzas</li>
-          <li onclick="window.location.href = 'order.html'">Sushi</li>
-          <li onclick="window.location.href = 'order.html'">Salads</li>
-          <li onclick="window.location.href = 'order.html'">Desserts</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li onclick="window.location.href = 'about.html'">About Us</li>
-          <li onclick="window.location.href = 'about.html'">Our Chefs</li>
-          <li>Careers</li>
-          <li>Press &amp; Media</li>
-          <li onclick="window.location.href = 'contact.html'">Contact</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Support</h5>
-        <ul>
-          <li onclick="window.location.href = 'contact.html'">Help Center</li>
-          <li>Track Your Order</li>
-          <li>Refunds Policy</li>
-          <li>Allergen Info</li>
-          <li>Privacy Policy</li>
-        </ul>
-      </div>
     </div>
-    <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
-      <span>© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
-        NY.</span>
-      <span>🍔 🍕 🍱 🥗 🍰</span>
-    </div>
-  </footer>
 
-  <script src="main.js" defer></script>
-</body>
+    <footer>
+      <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
+        <div class="footer-brand">
+          <div class="logo-f">Feast<span>House</span></div>
+          <p>
+            Premium food delivery crafted with love, fresh ingredients, and a
+            passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
+            Bronx since 2015.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <ul>
+            <li onclick="window.location.href = 'order.html'">Burgers</li>
+            <li onclick="window.location.href = 'order.html'">Pizzas</li>
+            <li onclick="window.location.href = 'order.html'">Sushi</li>
+            <li onclick="window.location.href = 'order.html'">Salads</li>
+            <li onclick="window.location.href = 'order.html'">Desserts</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li onclick="window.location.href = 'about.html'">About Us</li>
+            <li onclick="window.location.href = 'about.html'">Our Chefs</li>
+            <li>Careers</li>
+            <li>Press &amp; Media</li>
+            <li onclick="window.location.href = 'contact.html'">Contact</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li onclick="window.location.href = 'contact.html'">Help Center</li>
+            <li>Track Your Order</li>
+            <li>Refunds Policy</li>
+            <li>Allergen Info</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
+        <span
+          >© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
+          NY.</span
+        >
+        <span>🍔 🍕 🍱 🥗 🍰</span>
+      </div>
+    </footer>
 
+    <script src="main.js" defer></script>
+  </body>
 </html>

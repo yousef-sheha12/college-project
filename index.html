@@ -1,279 +1,293 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeastHouse — Premium Food Delivery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FeastHouse — Premium Food Delivery</title>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <nav>
+      <div class="logo">Feast<span>House</span></div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
 
-<body>
-  <!-- ===== NAV ===== -->
-  <nav>
-    <div class="logo">Feast<span>House</span></div>
-    <ul class="nav-links">
-      <li>
-        <a href="index.html" class="active">Home</a>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="order.html">Order</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="signin.html">Sign In</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-    </ul>
-  </nav>
+    <div id="home" class="page active">
+      <div class="hero">
+        <div class="hero-left">
+          <h1>Food That <span>Feeds</span> The Soul</h1>
+          <p>
+            Welcome to FeastHouse — where every dish is crafted with love, the
+            finest ingredients, and decades of culinary passion. From crispy
+            appetizers to rich desserts, we bring restaurant-quality meals
+            straight to your door, hot and fresh, every single time.
+          </p>
+          <div class="hero-btns">
+            <button class="btn" onclick="window.location.href = 'order.html'">
+              > Order Now
+            </button>
+            <button
+              class="btn btn-outline"
+              onclick="window.location.href = 'about.html'"
+            >
+              > Our Story
+            </button>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80"
+            alt="Food"
+          />
+        </div>
+      </div>
 
-  <div id="home" class="page active">
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-left">
-        <h1>Food That <span>Feeds</span> The Soul</h1>
-        <p>
-          Welcome to FeastHouse — where every dish is crafted with love, the
-          finest ingredients, and decades of culinary passion. From crispy
-          appetizers to rich desserts, we bring restaurant-quality meals
-          straight to your door, hot and fresh, every single time.
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="num">50K+</div>
+          <div class="lbl">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">120+</div>
+          <div class="lbl">Menu Items</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">4.9★</div>
+          <div class="lbl">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">30 min</div>
+          <div class="lbl">Average Delivery</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <h2 class="sec-title" style="margin-top: 8px">
+          Why Choose FeastHouse?
+        </h2>
+        <p class="sec-sub">
+          We've spent years perfecting not just our recipes, but the entire
+          experience — from the moment you open our app to the second you take
+          your first bite. Here's what sets us apart from every other food
+          delivery service.
         </p>
-        <div class="hero-btns">
-          <button class="btn" onclick="window.location.href = 'order.html'">
-            > Order Now
-          </button>
-          <button class="btn btn-outline" onclick="window.location.href = 'about.html'">
-            > Our Story
-          </button>
-        </div>
-      </div>
-      <div class="hero-img-wrap">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food" />
-      </div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="num">50K+</div>
-        <div class="lbl">Happy Customers</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">120+</div>
-        <div class="lbl">Menu Items</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">4.9★</div>
-        <div class="lbl">Average Rating</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">30 min</div>
-        <div class="lbl">Average Delivery</div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <!-- Why choose us -->
-      <h2 class="sec-title" style="margin-top: 8px">
-        Why Choose FeastHouse?
-      </h2>
-      <p class="sec-sub">
-        We've spent years perfecting not just our recipes, but the entire
-        experience — from the moment you open our app to the second you take
-        your first bite. Here's what sets us apart from every other food
-        delivery service.
-      </p>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">🌿</div>
-          <h4>Fresh Ingredients</h4>
-          <p>
-            We source locally every morning. No frozen produce, no shortcuts —
-            only the freshest ingredients make it to your plate.
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">👨‍🍳</div>
-          <h4>Expert Chefs</h4>
-          <p>
-            Our team of 12 professional chefs brings decades of experience
-            from top restaurants around the world to your doorstep.
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h4>Lightning Fast</h4>
-          <p>
-            Our delivery network guarantees your food arrives hot within 30
-            minutes, tracked in real-time on your phone.
-          </p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">💳</div>
-          <h4>Easy Payment</h4>
-          <p>
-            Pay with card, cash, or mobile wallet. Our checkout takes under 30
-            seconds and your data is always fully encrypted.
-          </p>
-        </div>
-      </div>
-
-      <!-- Featured dishes -->
-      <h2 class="sec-title">Today's Featured Dishes 🍽️</h2>
-      <p class="sec-sub">
-        Our chefs select the freshest ingredients each morning to build a
-        special menu that changes daily. These are today's must-try dishes —
-        order before they sell out!
-      </p>
-      <div class="featured-row">
-        <div class="featured-main">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Pizza" />
-          <div class="featured-main-text">
-            <h3>🔥 Wood-Fired Margherita Pizza</h3>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🌿</div>
+            <h4>Fresh Ingredients</h4>
             <p>
-              Fresh basil, buffalo mozzarella, San Marzano tomatoes — the
-              classic, done perfectly. $14.99
+              We source locally every morning. No frozen produce, no shortcuts —
+              only the freshest ingredients make it to your plate.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">👨‍🍳</div>
+            <h4>Expert Chefs</h4>
+            <p>
+              Our team of 12 professional chefs brings decades of experience
+              from top restaurants around the world to your doorstep.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h4>Lightning Fast</h4>
+            <p>
+              Our delivery network guarantees your food arrives hot within 30
+              minutes, tracked in real-time on your phone.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">💳</div>
+            <h4>Easy Payment</h4>
+            <p>
+              Pay with card, cash, or mobile wallet. Our checkout takes under 30
+              seconds and your data is always fully encrypted.
             </p>
           </div>
         </div>
-      </div>
 
-      <!-- Testimonials -->
-      <h2 class="sec-title">What Our Customers Say 💬</h2>
-      <p class="sec-sub">
-        Don't just take our word for it — here's what thousands of happy
-        customers across the city have to say about their FeastHouse
-        experience.
-      </p>
-      <div class="testimonials">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>
-            "I've tried every food delivery app in the city and FeastHouse is
-            on another level. The food always arrives hot, the packaging is
-            beautiful, and the portions are massive. Honestly the best burger
-            I've ever had — and I didn't even have to leave my couch!"
-          </p>
-          <div class="testi-author">
-            <div class="testi-avatar">JM</div>
-            <div>
-              <div class="testi-name">James Morgan</div>
-              <div class="testi-role">Food Blogger, New York</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>
-            "As someone who cares deeply about ingredient quality, FeastHouse
-            is the only delivery service I trust. They actually list where
-            each ingredient comes from. The salmon sushi roll is
-            restaurant-grade — I couldn't believe it was delivered to my
-            door."
-          </p>
-          <div class="testi-author">
-            <div class="testi-avatar">SP</div>
-            <div>
-              <div class="testi-name">Sarah Park</div>
-              <div class="testi-role">Nutritionist & Wellness Coach</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>
-            "We ordered FeastHouse for our entire office team lunch — 20
-            people — and every single order arrived exactly on time and
-            perfectly correct. The customer service was incredible when we had
-            a small issue. We're now a weekly subscriber. Absolutely love it."
-          </p>
-          <div class="testi-author">
-            <div class="testi-avatar">RK</div>
-            <div>
-              <div class="testi-name">Ryan Kim</div>
-              <div class="testi-role">Startup Founder, San Francisco</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
-      <div class="footer-brand">
-        <div class="logo-f">Feast<span>House</span></div>
-        <p>
-          Premium food delivery crafted with love, fresh ingredients, and a
-          passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
-          Bronx since 2015.
+        <h2 class="sec-title">Today's Featured Dishes 🍽️</h2>
+        <p class="sec-sub">
+          Our chefs select the freshest ingredients each morning to build a
+          special menu that changes daily. These are today's must-try dishes —
+          order before they sell out!
         </p>
+        <div class="featured-row">
+          <div class="featured-main">
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80"
+              alt="Pizza"
+            />
+            <div class="featured-main-text">
+              <h3>🔥 Wood-Fired Margherita Pizza</h3>
+              <p>
+                Fresh basil, buffalo mozzarella, San Marzano tomatoes — the
+                classic, done perfectly. $14.99
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="sec-title">What Our Customers Say 💬</h2>
+        <p class="sec-sub">
+          Don't just take our word for it — here's what thousands of happy
+          customers across the city have to say about their FeastHouse
+          experience.
+        </p>
+        <div class="testimonials">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>
+              "I've tried every food delivery app in the city and FeastHouse is
+              on another level. The food always arrives hot, the packaging is
+              beautiful, and the portions are massive. Honestly the best burger
+              I've ever had — and I didn't even have to leave my couch!"
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">JM</div>
+              <div>
+                <div class="testi-name">James Morgan</div>
+                <div class="testi-role">Food Blogger, New York</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>
+              "As someone who cares deeply about ingredient quality, FeastHouse
+              is the only delivery service I trust. They actually list where
+              each ingredient comes from. The salmon sushi roll is
+              restaurant-grade — I couldn't believe it was delivered to my
+              door."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">SP</div>
+              <div>
+                <div class="testi-name">Sarah Park</div>
+                <div class="testi-role">Nutritionist & Wellness Coach</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>
+              "We ordered FeastHouse for our entire office team lunch — 20
+              people — and every single order arrived exactly on time and
+              perfectly correct. The customer service was incredible when we had
+              a small issue. We're now a weekly subscriber. Absolutely love it."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">RK</div>
+              <div>
+                <div class="testi-name">Ryan Kim</div>
+                <div class="testi-role">Startup Founder, San Francisco</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-col">
-        <h5>Menu</h5>
-        <ul>
-          <li onclick="window.location.href = 'order.html'">Burgers</li>
-          <li onclick="
+    </div>
+
+    <footer>
+      <div class="footer-grid" style="max-width: 1060px; margin: 0 auto">
+        <div class="footer-brand">
+          <div class="logo-f">Feast<span>House</span></div>
+          <p>
+            Premium food delivery crafted with love, fresh ingredients, and a
+            passion for flavor. Serving Brooklyn, Manhattan, Queens, and The
+            Bronx since 2015.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <ul>
+            <li onclick="window.location.href = 'order.html'">Burgers</li>
+            <li
+              onclick="
                 show('order', document.querySelectorAll('.nav-links a')[2])
-              ">
-            Pizzas
-          </li>
-          <li onclick="
+              "
+            >
+              Pizzas
+            </li>
+            <li
+              onclick="
                 show('order', document.querySelectorAll('.nav-links a')[2])
-              ">
-            Sushi
-          </li>
-          <li onclick="
+              "
+            >
+              Sushi
+            </li>
+            <li
+              onclick="
                 show('order', document.querySelectorAll('.nav-links a')[2])
-              ">
-            Salads
-          </li>
-          <li onclick="
+              "
+            >
+              Salads
+            </li>
+            <li
+              onclick="
                 show('order', document.querySelectorAll('.nav-links a')[2])
-              ">
-            Desserts
-          </li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li onclick="window.location.href = 'about.html'">About Us</li>
-          <li onclick="
+              "
+            >
+              Desserts
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li onclick="window.location.href = 'about.html'">About Us</li>
+            <li
+              onclick="
                 show('about', document.querySelectorAll('.nav-links a')[1])
-              ">
-            Our Chefs
-          </li>
-          <li>Careers</li>
-          <li>Press & Media</li>
-          <li onclick="window.location.href = 'contact.html'">Contact</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Support</h5>
-        <ul>
-          <li onclick="
+              "
+            >
+              Our Chefs
+            </li>
+            <li>Careers</li>
+            <li>Press & Media</li>
+            <li onclick="window.location.href = 'contact.html'">Contact</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li
+              onclick="
                 show('contact', document.querySelectorAll('.nav-links a')[3])
-              ">
-            Help Center
-          </li>
-          <li>Track Your Order</li>
-          <li>Refunds Policy</li>
-          <li>Allergen Info</li>
-          <li>Privacy Policy</li>
-        </ul>
+              "
+            >
+              Help Center
+            </li>
+            <li>Track Your Order</li>
+            <li>Refunds Policy</li>
+            <li>Allergen Info</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
-      <span>© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
-        NY.</span>
-      <span>🍔 🍕 🍱 🥗 🍰</span>
-    </div>
-  </footer>
+      <div class="footer-bottom" style="max-width: 1060px; margin: 0 auto">
+        <span
+          >© 2025 FeastHouse. All rights reserved. Made with ❤️ in Brooklyn,
+          NY.</span
+        >
+        <span>🍔 🍕 🍱 🥗 🍰</span>
+      </div>
+    </footer>
 
-  <script src="main.js" defer></script>
-</body>
-
+    <script src="main.js" defer></script>
+  </body>
 </html>

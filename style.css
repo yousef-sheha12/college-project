@@ -1,4 +1,3 @@
-/* ===== CSS VARIABLES ===== */
 :root {
   --orange: #f97316;
   --orange-d: #ea580c;
@@ -14,7 +13,6 @@
   --radius: 16px;
 }
 
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +40,6 @@ ul {
   list-style: none;
 }
 
-/* ===== NAV ===== */
 nav {
   background: var(--dark);
   height: 68px;
@@ -88,14 +85,6 @@ nav {
   color: var(--white);
 }
 
-/* ===== WRAPPER ===== */
-.wrap {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 48px 32px;
-}
-
-/* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
   padding: 13px 30px;
@@ -106,9 +95,6 @@ nav {
   font-size: 15px;
   border: none;
   cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.15s;
 }
 
 .btn:hover {
@@ -144,7 +130,6 @@ nav {
   background: #15803d;
 }
 
-/* ===== SECTION TITLE ===== */
 .sec-title {
   font-family: "Playfair Display", serif;
   font-size: 32px;
@@ -161,7 +146,6 @@ nav {
   line-height: 1.7;
 }
 
-/* ===== CARD ===== */
 .card {
   background: var(--white);
   border-radius: var(--radius);
@@ -184,7 +168,6 @@ nav {
   font-size: 15px;
 }
 
-/* ===== GRIDS ===== */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -197,7 +180,6 @@ nav {
   gap: 22px;
 }
 
-/* ===== BANNER IMG ===== */
 .banner-img {
   width: 100%;
   height: 220px;
@@ -206,7 +188,6 @@ nav {
   margin-bottom: 20px;
 }
 
-/* Hero */
 .hero {
   background: linear-gradient(135deg, #111827 0%, #1f2937 60%, #374151 100%);
   padding: 70px 64px;
@@ -271,7 +252,6 @@ nav {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Stats bar */
 .stats-bar {
   background: var(--orange);
   display: grid;
@@ -302,7 +282,6 @@ nav {
   margin-top: 2px;
 }
 
-/* Why choose us */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -336,7 +315,6 @@ nav {
   line-height: 1.7;
 }
 
-/* Featured dish row */
 .featured-row {
   display: flex;
   gap: 24px;
@@ -423,7 +401,6 @@ nav {
   margin-top: 4px;
 }
 
-/* Testimonials */
 .testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -481,9 +458,6 @@ nav {
   font-size: 12px;
 }
 
-/* ============================================================
- ABOUT PAGE
- ============================================================ */
 .about-hero {
   background: linear-gradient(135deg, #111827, #1f2937);
   border-radius: var(--radius);
@@ -641,9 +615,6 @@ nav {
   line-height: 1.7;
 }
 
-/* ============================================================
- CONTACT PAGE
- ============================================================ */
 .contact-hero {
   background: linear-gradient(135deg, var(--orange) 0%, var(--orange-d) 100%);
   border-radius: var(--radius);
@@ -717,7 +688,6 @@ nav {
   font-size: 12px;
 }
 
-/* Form */
 .form-card {
   background: var(--white);
   border-radius: var(--radius);
@@ -806,7 +776,6 @@ nav {
   display: none;
 }
 
-/* FAQ */
 .faq-item {
   background: var(--white);
   border-radius: 12px;
@@ -834,9 +803,6 @@ nav {
   line-height: 1.8;
 }
 
-/* ============================================================
- ORDER PAGE
- ============================================================ */
 .menu-tabs {
   display: flex;
   gap: 8px;
@@ -989,7 +955,6 @@ nav {
   flex-shrink: 0;
 }
 
-/* Delivery options */
 .delivery-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1032,48 +997,13 @@ nav {
   border-radius: 20px;
 }
 
-/* ============================================================
- SIGN IN PAGE
- ============================================================ */
 .auth-wrap {
   display: grid;
   gap: 0;
   min-height: calc(100vh - 68px);
 }
 
-
-
-.auth-feature {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.auth-feature .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--orange);
-  flex-shrink: 0;
-}
-
-.auth-feature p {
-  color: #d1d5db;
-  font-size: 14px;
-  margin: 0;
-}
-
-.auth-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-top: 28px;
-  opacity: 0.7;
-}
-
-.auth-right {
+.auth-middle {
   background: var(--light);
   padding: 64px 48px;
   display: flex;
@@ -1082,56 +1012,16 @@ nav {
   margin: auto;
 }
 
-.auth-right h2 {
+.auth-middle h2 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
   margin-bottom: 6px;
 }
 
-.auth-right .sub {
+.auth-middle .sub {
   color: var(--muted);
   font-size: 14px;
   margin-bottom: 28px;
-}
-
-.social-btns {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
-.social-btn {
-  flex: 1;
-  padding: 11px;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  background: white;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  transition: border 0.2s;
-  text-align: center;
-}
-
-.social-btn:hover {
-  border-color: var(--orange);
-}
-
-.divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 22px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--border);
 }
 
 .auth-switch {
@@ -1157,51 +1047,6 @@ nav {
   margin-bottom: 16px;
 }
 
-/* ============================================================
- SIGN UP PAGE
- ============================================================ */
-.signup-left {
-  background: linear-gradient(160deg, var(--orange), var(--orange-d));
-}
-
-.plan-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-
-.plan-card {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.plan-card h4 {
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
-
-.plan-card p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.plan-card .plan-price {
-  color: white;
-  font-size: 22px;
-  font-weight: 900;
-  font-family: "Playfair Display", serif;
-  margin-top: 8px;
-}
-
-/* ============================================================
- FOOTER
- ============================================================ */
 footer {
   background: var(--dark);
   color: #9ca3af;
@@ -1245,7 +1090,6 @@ footer {
   margin-bottom: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: color 0.2s;
 }
 
 .footer-col li:hover {
@@ -1260,9 +1104,6 @@ footer {
   font-size: 13px;
 }
 
-/* ============================================================
- CART PAGE
- ============================================================ */
 .cart-hero {
   background: linear-gradient(135deg, var(--dark), var(--dark2));
   color: var(--white);
@@ -1453,7 +1294,6 @@ footer {
 }
 
 @media (max-width: 980px) {
-
   .cart-layout,
   .auth-wrap,
   .grid-2,
