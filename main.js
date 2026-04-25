@@ -1,9 +1,11 @@
+/* --- مفاتيح التخزين المحلي (LocalStorage Keys) --- */
 const KEYS = {
   USERS: "feasthouse_users",
   USER_LOGGED_IN: "feasthouse_current_user",
   CART: "feasthouse_cart",
 };
 
+/* --- التحقق من تسجيل الدخول (Authentication Check) --- */
 function checkAuth() {
   const user = getData(KEYS.USER_LOGGED_IN, null);
   let currentPage = window.location.pathname.split("/").pop();
@@ -12,23 +14,31 @@ function checkAuth() {
 
   const authPages = ["signin.html", "signup.html"];
 
+  // إذا لم يكن المستخدم مسجلاً وكان في صفحة تتطلب تسجيل دخول، يتم توجيهه لصفحة الدخول
   if (!user && !authPages.includes(currentPage)) {
     window.location.href = "signin.html";
   }
 }
 
+/* --- وظائف مساعدة للبيانات والتنسيق (Helper Functions) --- */
+
+// حفظ البيانات في التخزين المحلي
 function saveData(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+// جلب البيانات من التخزين المحلي
 function getData(key, defaultValue) {
   const data = localStorage.getItem(key);
   return data ? JSON.parse(data) : defaultValue;
 }
 
+// تنسيق المبالغ المالية
 function formatMoney(amount) {
   return "$" + Number(amount).toFixed(2);
 }
+
+/* --- إدارة السلة (Cart Management) --- */
 
 function getCart() {
   return getData(KEYS.CART, []);
@@ -39,6 +49,7 @@ function saveCart(cart) {
   renderCart();
 }
 
+// إضافة منتج للسلة
 function addToCart(product) {
   let cart = getCart();
   const existing = cart.find((item) => item.id === product.id);
@@ -54,6 +65,8 @@ function addToCart(product) {
   window.location.href = "cart.html";
 }
 
+/* --- إدارة المستخدمين (User Management) --- */
+
 function getAllUsers() {
   return getData(KEYS.USERS, []);
 }
@@ -62,10 +75,13 @@ function getLoggedInUser() {
   return getData(KEYS.USER_LOGGED_IN, null);
 }
 
+// تسجيل الخروج
 function logout() {
   localStorage.removeItem(KEYS.USER_LOGGED_IN);
   window.location.href = "signin.html";
 }
+
+/* --- عمليات تسجيل الدخول (Sign-in Logic) --- */
 
 function doSignin() {
   const emailInput = document
@@ -99,6 +115,8 @@ function doSignin() {
     }
   }
 }
+
+/* --- عمليات إنشاء حساب جديد (Sign-up Logic) --- */
 
 function doSignup() {
   const firstName = document.getElementById("su_first")?.value.trim();
@@ -136,18 +154,22 @@ function doSignup() {
   }, 1000);
 }
 
+/* --- تحديث القائمة العلوية (Update Navbar) --- */
+
 function updateNavbar() {
   const user = getLoggedInUser();
   const navLinks = document.querySelector(".nav-links");
   if (!navLinks) return;
 
   if (user) {
+    // إخفاء أزرار الدخول والتسجيل إذا كان مسجلاً
     const signinLink = navLinks.querySelector('a[href="signin.html"]');
     const signupLink = navLinks.querySelector('a[href="signup.html"]');
 
     if (signinLink) signinLink.parentElement.style.display = "none";
     if (signupLink) signupLink.parentElement.style.display = "none";
 
+    // إضافة زر تسجيل الخروج مع اسم المستخدم
     if (!document.querySelector(".logout-btn")) {
       const li = document.createElement("li");
       li.innerHTML = `<a href="#" class="logout-btn" onclick="logout()">Logout (${user.firstName})</a>`;
@@ -155,6 +177,8 @@ function updateNavbar() {
     }
   }
 }
+
+/* --- عرض محتويات السلة (Render Cart) --- */
 
 function renderCart() {
   const cartItemsBox = document.getElementById("cartItems");
@@ -192,6 +216,8 @@ function renderCart() {
   updateCartSummary(total);
 }
 
+/* --- تحديث كمية المنتج أو حذفه (Update Qty / Remove) --- */
+
 window.updateQty = function (index, change) {
   let cart = getCart();
   cart[index].quantity += change;
@@ -206,6 +232,8 @@ window.removeFromCart = function (index) {
   cart.splice(index, 1);
   saveCart(cart);
 };
+
+/* --- تحديث ملخص السلة (Update Cart Summary) --- */
 
 function updateCartSummary(subtotal) {
   const subE = document.getElementById("subtotalValue");
@@ -223,6 +251,8 @@ function updateCartSummary(subtotal) {
     cartCountE.textContent = totalQty;
   }
 }
+
+/* --- إتمام الطلب (Place Order Logic) --- */
 
 window.placeOrder = function () {
   const name = document.getElementById("deliveryName")?.value.trim();
@@ -245,12 +275,15 @@ window.placeOrder = function () {
   window.location.href = "index.html";
 };
 
+/* --- تشغيل الوظائف عند تحميل الصفحة (Initialization) --- */
+
 checkAuth();
 
 document.addEventListener("DOMContentLoaded", () => {
   updateNavbar();
   renderCart();
 
+  // تفعيل أزرار "إضافة للسلة" في بطاقات الطعام
   const addButtons = document.querySelectorAll(".food-card .btn");
   addButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -269,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // تفعيل زر مسح السلة
   const clearBtn = document.querySelector(".clear-cart");
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {

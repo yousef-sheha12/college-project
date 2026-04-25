@@ -1,3 +1,4 @@
+/* --- المتغيرات الأساسية (Variables) --- */
 :root {
   --orange: #f97316;
   --orange-d: #ea580c;
@@ -13,6 +14,7 @@
   --radius: 16px;
 }
 
+/* --- إعدادات الصفحة العامة (Global Resets) --- */
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +42,7 @@ ul {
   list-style: none;
 }
 
+/* --- شريط التنقل (Navigation Bar) --- */
 nav {
   background: var(--dark);
   height: 68px;
@@ -85,6 +88,7 @@ nav {
   color: var(--white);
 }
 
+/* --- الأزرار (Buttons) --- */
 .btn {
   display: inline-block;
   padding: 13px 30px;
@@ -130,6 +134,7 @@ nav {
   background: #15803d;
 }
 
+/* --- تنسيقات عامة ومساعدة (Utility Classes) --- */
 .sec-title {
   font-family: "Playfair Display", serif;
   font-size: 32px;
@@ -188,6 +193,7 @@ nav {
   margin-bottom: 20px;
 }
 
+/* --- قسم الهيرو (Hero Section) --- */
 .hero {
   background: linear-gradient(135deg, #111827 0%, #1f2937 60%, #374151 100%);
   padding: 70px 64px;
@@ -252,6 +258,7 @@ nav {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
+/* --- شريط الإحصائيات (Stats Bar) --- */
 .stats-bar {
   background: var(--orange);
   display: grid;
@@ -282,6 +289,7 @@ nav {
   margin-top: 2px;
 }
 
+/* --- قسم "لماذا نحن؟" (Why Us Section) --- */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -315,6 +323,7 @@ nav {
   line-height: 1.7;
 }
 
+/* --- الأطباق المميزة (Featured Dishes) --- */
 .featured-row {
   display: flex;
   gap: 24px;
@@ -401,6 +410,7 @@ nav {
   margin-top: 4px;
 }
 
+/* --- آراء العملاء (Testimonials) --- */
 .testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -458,6 +468,7 @@ nav {
   font-size: 12px;
 }
 
+/* --- صفحة "عن المطعم" (About Page) --- */
 .about-hero {
   background: linear-gradient(135deg, #111827, #1f2937);
   border-radius: var(--radius);
@@ -493,6 +504,7 @@ nav {
   font-size: 15px;
 }
 
+/* --- التسلسل الزمني (Timeline) --- */
 .timeline {
   margin-bottom: 32px;
 }
@@ -531,6 +543,7 @@ nav {
   line-height: 1.7;
 }
 
+/* --- قسم الطهاة (Chefs Grid) --- */
 .chef-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -575,6 +588,7 @@ nav {
   line-height: 1.7;
 }
 
+/* --- قيمنا (Values Grid) --- */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -615,6 +629,7 @@ nav {
   line-height: 1.7;
 }
 
+/* --- صفحة "تواصل معنا" (Contact Page) --- */
 .contact-hero {
   background: linear-gradient(135deg, var(--orange) 0%, var(--orange-d) 100%);
   border-radius: var(--radius);
@@ -636,6 +651,7 @@ nav {
   max-width: 500px;
 }
 
+/* --- معلومات التواصل (Contact Info) --- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -688,6 +704,7 @@ nav {
   font-size: 12px;
 }
 
+/* --- نماذج الإدخال (Forms) --- */
 .form-card {
   background: var(--white);
   border-radius: var(--radius);
@@ -752,6 +769,7 @@ nav {
   gap: 14px;
 }
 
+/* --- التنبيهات (Alerts) --- */
 .alert-success {
   background: #dcfce7;
   border: 2px solid #86efac;
@@ -776,6 +794,7 @@ nav {
   display: none;
 }
 
+/* --- الأسئلة الشائعة (FAQ) --- */
 .faq-item {
   background: var(--white);
   border-radius: 12px;
@@ -803,6 +822,7 @@ nav {
   line-height: 1.8;
 }
 
+/* --- تبويبات القائمة (Menu Tabs) --- */
 .menu-tabs {
   display: flex;
   gap: 8px;
@@ -829,6 +849,7 @@ nav {
   color: white;
 }
 
+/* --- بطاقات الطعام (Food Cards Grid) --- */
 .food-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -918,6 +939,7 @@ nav {
   border-color: #bbf7d0;
 }
 
+/* --- بانر السلة (Cart Banner) --- */
 .cart-banner {
   background: linear-gradient(135deg, var(--dark), var(--dark2));
   border-radius: var(--radius);
@@ -955,6 +977,7 @@ nav {
   flex-shrink: 0;
 }
 
+/* --- خيارات التوصيل (Delivery Options) --- */
 .delivery-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -997,6 +1020,7 @@ nav {
   border-radius: 20px;
 }
 
+/* --- صفحات تسجيل الدخول والاشتراك (Auth Pages) --- */
 .auth-wrap {
   display: grid;
   gap: 0;
@@ -1047,6 +1071,7 @@ nav {
   margin-bottom: 16px;
 }
 
+/* --- تذييل الصفحة (Footer) --- */
 footer {
   background: var(--dark);
   color: #9ca3af;
@@ -1104,6 +1129,7 @@ footer {
   font-size: 13px;
 }
 
+/* --- رأس صفحة السلة (Cart Hero) --- */
 .cart-hero {
   background: linear-gradient(135deg, var(--dark), var(--dark2));
   color: var(--white);
@@ -1137,6 +1163,7 @@ footer {
   flex-shrink: 0;
 }
 
+/* --- تخطيط السلة (Cart Layout) --- */
 .cart-layout {
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
@@ -1239,6 +1266,7 @@ footer {
   color: var(--orange);
 }
 
+/* --- ملخص الطلب والتوصيل (Order Summary) --- */
 .summary-list {
   display: flex;
   flex-direction: column;
@@ -1277,6 +1305,7 @@ footer {
   gap: 14px;
 }
 
+/* --- حالة السلة الفارغة (Empty Cart) --- */
 .empty-cart {
   text-align: center;
   padding: 36px 18px;
@@ -1293,6 +1322,7 @@ footer {
   margin-bottom: 18px;
 }
 
+/* --- استجابة التصميم للهواتف (Responsive Design) --- */
 @media (max-width: 980px) {
   .cart-layout,
   .auth-wrap,
