@@ -200,11 +200,11 @@ function renderCart() {
         <img src="${item.image}" alt="${item.title}">
         <div class="cart-item-body">
           <h4>${item.title}</h4>
-          <p>السعر: ${formatMoney(item.price)}</p>
+          <p>price : ${formatMoney(item.price)}</p>
           <div class="qty-control">
-            <button onclick="updateQty(${index}, -1)">-</button>
+            <button class="inc-btn" onclick="updateQty(${index}, -1)">-</button>
             <span>${item.quantity}</span>
-            <button onclick="updateQty(${index}, 1)">+</button>
+            <button class="dec-btn" onclick="updateQty(${index}, 1)">+</button>
           </div>
         </div>
         <button class="remove-btn" onclick="removeFromCart(${index})" style="background:#fee2e2; color:#b91c1c; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">حذف</button>

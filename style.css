@@ -20,6 +20,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.wrap {
+  margin-inline: 30px;
+}
 
 body {
   font-family: "DM Sans", sans-serif;
@@ -141,6 +144,7 @@ nav {
   font-weight: 900;
   color: var(--dark);
   margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 .sec-sub {
@@ -471,7 +475,6 @@ nav {
 /* --- صفحة "عن المطعم" (About Page) --- */
 .about-hero {
   background: linear-gradient(135deg, #111827, #1f2937);
-  border-radius: var(--radius);
   padding: 52px 48px;
   display: flex;
   gap: 36px;
@@ -636,6 +639,7 @@ nav {
   padding: 48px;
   color: white;
   margin-bottom: 32px;
+  margin-top: 40px;
 }
 
 .contact-hero h1 {
@@ -1169,6 +1173,7 @@ footer {
   grid-template-columns: 1.35fr 0.9fr;
   gap: 22px;
   padding-inline: 15px;
+  margin-top: 20px;
 }
 
 .cart-panel {
@@ -1230,8 +1235,16 @@ footer {
   gap: 10px;
   background: #fff7ed;
   border: 1px solid #fed7aa;
-  border-radius: 999px;
   padding: 6px 10px;
+}
+.inc-btn,
+.dec-btn {
+  /* background: none; */
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .qty-btn,
