@@ -1,11 +1,11 @@
-/*  مفاتيح التخزين المحلي (LocalStorage Keys)  */
+// (LocalStorage Keys) 
 const KEYS = {
   USERS: "feasthouse_users",
   USER_LOGGED_IN: "feasthouse_current_user",
   CART: "feasthouse_cart",
 };
 
-/*  التحقق من تسجيل الدخول (Authentication Check)  */
+//Authentication Check 
 function checkAuth() {
   const user = getData(KEYS.USER_LOGGED_IN, null);
   let currentPage = window.location.pathname.split("/").pop();
@@ -20,7 +20,7 @@ function checkAuth() {
   }
 }
 
-/*  وظائف مساعدة للبيانات والتنسيق (Helper Functions)  */
+// (Helper Functions)  //
 
 // حفظ البيانات في التخزين المحلي
 function saveData(key, value) {
@@ -38,7 +38,7 @@ function formatMoney(amount) {
   return "$" + Number(amount).toFixed(2);
 }
 
-/*  إدارة السلة (Cart Management)  */
+// (Cart Management)  //
 
 function getCart() {
   return getData(KEYS.CART, []);
@@ -62,10 +62,10 @@ function addToCart(product) {
   }
 
   saveCart(cart);
-  // window.location.href = "cart.html";
+  window.location.href = "cart.html";
 }
 
-/*  إدارة المستخدمين (User Management)  */
+// (User Management)  //
 
 function getAllUsers() {
   return getData(KEYS.USERS, []);
@@ -81,7 +81,7 @@ function logout() {
   window.location.href = "signin.html";
 }
 
-/*  عمليات تسجيل الدخول (Sign-in Logic)  */
+// (Sign-in Logic)  //
 
 function doSignin() {
   const emailInput = document
@@ -93,7 +93,7 @@ function doSignin() {
   const successBox = document.getElementById("signinSuccess");
 
   if (!emailInput || !passInput) {
-    alert("يرجى إدخال البريد الإلكتروني وكلمة المرور");
+    alert("Please enter the email and password");
     return;
   }
 
@@ -110,7 +110,7 @@ function doSignin() {
     }, 1000);
   } else {
     if (errorBox) {
-      errorBox.textContent = "بيانات الدخول غير صحيحة!";
+      errorBox.textContent = "Invalid login credentials!";
       errorBox.style.display = "block";
     }
   }
@@ -128,18 +128,18 @@ function doSignup() {
   const confirm = document.getElementById("su_confirm")?.value;
 
   if (!firstName || !lastName || !email || !pass || !confirm) {
-    alert("يرجى ملء جميع الخانات الأساسية");
+    alert("Please fill in all the required fields");
     return;
   }
 
   if (pass !== confirm) {
-    alert("كلمات المرور غير متطابقة");
+    alert("Passwords do not match");
     return;
   }
 
   let users = getAllUsers();
   if (users.some((u) => u.email === email)) {
-    alert("هذا البريد الإلكتروني مسجل بالفعل!");
+    alert("This email is already registered!");
     return;
   }
 
@@ -186,7 +186,7 @@ function renderCart() {
 
   const cart = getCart();
   if (cart.length === 0) {
-    cartItemsBox.innerHTML = "<p class='empty-msg'>سلتك فارغة حالياً.</p>";
+    cartItemsBox.innerHTML = "<p class='empty-msg'>Your cart is empty.</p>";
     updateCartSummary(0);
     return;
   }
@@ -207,7 +207,7 @@ function renderCart() {
             <button class="dec-btn" onclick="updateQty(${index}, 1)">+</button>
           </div>
         </div>
-        <button class="remove-btn" onclick="removeFromCart(${index})" style="background:#fee2e2; color:#b91c1c; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">حذف</button>
+        <button class="remove-btn" onclick="removeFromCart(${index})" style="background:#fee2e2; color:#b91c1c; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">Remove</button>
       </div>
     `;
     })
@@ -261,16 +261,16 @@ window.placeOrder = function () {
   const cart = getCart();
 
   if (cart.length === 0) {
-    alert("سلتك فارغة!");
+    alert("Your cart is empty!");
     return;
   }
 
   if (!name || !phone || !address) {
-    alert("يرجى ملء بيانات التوصيل الأساسية (الاسم، الهاتف، العنوان)");
+    alert("Please fill in the basic delivery information (name, phone, address)");
     return;
   }
 
-  alert("تم استلام طلبك يا " + name + "! سنتواصل معك قريباً.");
+  alert("Your order has been received, " + name + "! We will contact you soon.");
   saveData(KEYS.CART, []);
   window.location.href = "index.html";
 };
@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearBtn = document.querySelector(".clear-cart");
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
-      if (confirm("هل تريد بالتأكيد مسح السلة؟")) {
+      if (confirm("Are you sure you want to clear the cart?")) {
         saveData(KEYS.CART, []);
         renderCart();
       }
