@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -20,6 +21,11 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="signin.html">Sign In</a></li>
         <li><a href="signup.html">Sign Up</a></li>
+        <li class="cart-icon">
+          <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -69,25 +75,6 @@
             </button>
           </div>
         </div>
-
-        <!-- <div class="food-card" data-cat="sushi">
-          <img src="assets/product3.jpeg" alt="Sushi" />
-          <div class="food-body">
-            <h4>Salmon Volcano Roll</h4>
-            <p class="desc">
-              Premium Atlantic salmon, creamy avocado, cucumber, topped with
-              spicy mayo, tobiko flying fish roe, and a drizzle of unagi eel
-              sauce. 8 pieces per order.
-            </p>
-            <div class="food-meta">
-              <span class="food-price">$16.99</span>
-              <span class="food-rating"><span>★</span> 4.9 (980)</span>
-            </div>
-            <button class="btn" style="width: 100%; margin-top: 12px">
-              Add to cart
-            </button>
-          </div>
-        </div> -->
 
         <div class="food-card" data-cat="salad">
           <img src="assets/product4.jpeg" alt="Salad" />
@@ -219,25 +206,25 @@
         <div class="footer-col">
           <h5>Menu</h5>
           <ul>
-            <li onclick="window.location.href = 'order.html'">(Burgers / Pizzas)</li>
-            <li onclick="window.location.href = 'order.html'">Salads</li>
-            <li onclick="window.location.href = 'order.html'">Desserts</li>
+            <li><a href="order.html">(Burgers / Pizzas)</a></li>
+            <li><a href="order.html">Salads</a></li>
+            <li><a href="order.html">Desserts</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li onclick="window.location.href = 'about.html'">About Us</li>
-            <li onclick="window.location.href = 'about.html'">Our Chefs</li>
-            <li onclick="window.location.href = 'contact.html'">Contact</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">Our Chefs</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
-            <li onclick="window.location.href = 'contact.html'">Help Center</li>
-            <li onclick="window.location.href = 'contact.html'">Track Your Order</li>
-            <li onclick="window.location.href = 'contact.html'">Privacy Policy</li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html">Track Your Order</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
           </ul>
         </div>
       </div>

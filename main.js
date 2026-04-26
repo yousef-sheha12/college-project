@@ -1,11 +1,11 @@
-/* --- مفاتيح التخزين المحلي (LocalStorage Keys) --- */
+/*  مفاتيح التخزين المحلي (LocalStorage Keys)  */
 const KEYS = {
   USERS: "feasthouse_users",
   USER_LOGGED_IN: "feasthouse_current_user",
   CART: "feasthouse_cart",
 };
 
-/* --- التحقق من تسجيل الدخول (Authentication Check) --- */
+/*  التحقق من تسجيل الدخول (Authentication Check)  */
 function checkAuth() {
   const user = getData(KEYS.USER_LOGGED_IN, null);
   let currentPage = window.location.pathname.split("/").pop();
@@ -20,7 +20,7 @@ function checkAuth() {
   }
 }
 
-/* --- وظائف مساعدة للبيانات والتنسيق (Helper Functions) --- */
+/*  وظائف مساعدة للبيانات والتنسيق (Helper Functions)  */
 
 // حفظ البيانات في التخزين المحلي
 function saveData(key, value) {
@@ -38,7 +38,7 @@ function formatMoney(amount) {
   return "$" + Number(amount).toFixed(2);
 }
 
-/* --- إدارة السلة (Cart Management) --- */
+/*  إدارة السلة (Cart Management)  */
 
 function getCart() {
   return getData(KEYS.CART, []);
@@ -62,10 +62,10 @@ function addToCart(product) {
   }
 
   saveCart(cart);
-  window.location.href = "cart.html";
+  // window.location.href = "cart.html";
 }
 
-/* --- إدارة المستخدمين (User Management) --- */
+/*  إدارة المستخدمين (User Management)  */
 
 function getAllUsers() {
   return getData(KEYS.USERS, []);
@@ -81,7 +81,7 @@ function logout() {
   window.location.href = "signin.html";
 }
 
-/* --- عمليات تسجيل الدخول (Sign-in Logic) --- */
+/*  عمليات تسجيل الدخول (Sign-in Logic)  */
 
 function doSignin() {
   const emailInput = document
@@ -116,7 +116,7 @@ function doSignin() {
   }
 }
 
-/* --- عمليات إنشاء حساب جديد (Sign-up Logic) --- */
+/*  عمليات إنشاء حساب جديد (Sign-up Logic)  */
 
 function doSignup() {
   const firstName = document.getElementById("su_first")?.value.trim();
@@ -154,7 +154,7 @@ function doSignup() {
   }, 1000);
 }
 
-/* --- تحديث القائمة العلوية (Update Navbar) --- */
+/*  تحديث القائمة العلوية (Update Navbar)  */
 
 function updateNavbar() {
   const user = getLoggedInUser();
@@ -178,7 +178,7 @@ function updateNavbar() {
   }
 }
 
-/* --- عرض محتويات السلة (Render Cart) --- */
+/*  عرض محتويات السلة (Render Cart)  */
 
 function renderCart() {
   const cartItemsBox = document.getElementById("cartItems");
